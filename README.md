@@ -7,7 +7,7 @@ This script needs:
 
 ## Usage
 ```bash
-eac3toac3.sh mkvfilename.mkv
+./eac3toac3.sh mkvfilename.mkv
 ```
 
 Will output:
