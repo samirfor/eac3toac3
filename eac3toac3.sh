@@ -10,7 +10,7 @@ IFILE=$(basename "$MKV_INPUT")
 IFILE="${IFILE%.*}"
 
 # get E-AC3 audio track ID from MKV container
-LINE=$(mkvinfo ${MKV_INPUT} | grep "Track type" | grep -n "audio" | cut -d":" -f1)
+LINE=$(LANG=C mkvinfo ${MKV_INPUT} | grep "Track type" | grep -n "audio" | cut -d":" -f1)
 AUDIO_ID=$(( $LINE - 1 ))
 
 # extract E-AC3 audio track from MKV container
